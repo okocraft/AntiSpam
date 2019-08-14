@@ -1,0 +1,42 @@
+name: AntiSpam
+version: 1.0.0
+main: net.okocraft.antispam.AntiSpam
+author: LazyGon
+api-version: "1.14"
+commands:
+  antispam:
+    description: Base command of AntiSpam plugin.
+    aliases: [as]
+    permission: antispam.command
+
+permissions:
+  antispam.*:
+    description: Includes all antispam permissions.
+    default: op
+    children:
+      antispam.command.*: true
+      antispam.bypass.*: true
+  antispam.command.*:
+    description: Includes all antispam command permission.
+    default: op
+    children:
+      antispam.command: true
+  antispam.bypass.*:
+    description: Includes all antispam bypass permission.
+    default: true
+    children:
+      antispam.bypass.sameplayer: true
+      antispam.bypass.similarword: true
+      antispam.bypass.ngword: true
+  antispam.command:
+    description: Permission for command /antispam
+    default: op
+  antispam.bypass.sameplayer:
+    description: Permission for bypassing same player chat repeating check.
+    default: op
+  antispam.bypass.similarword:
+    description: Permission for bypassing similar word repeating check.
+    default: op
+  antispam.bypass.ngword:
+    description: Permission for bypassing ngword check.
+    default: op

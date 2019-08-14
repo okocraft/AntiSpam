@@ -1,0 +1,39 @@
+SamePlayerLimit:
+  Enabled: true
+  Times: 4 # How many times same player chat.
+  Cooldown: 8 # in second
+
+SimilarWordLimit:
+  enabled: true
+  Times: 5 # How many similar sentences can be sent.
+
+NgWordLimit:
+  enabled: true
+  NgWords:
+    - "fuck"
+    - "ファック"
+    - "sex"
+    - "セックス"
+    - "せっくす"
+    - "死ね"
+    - "殺す"
+    - "ちん(ぽ|こ|ちん)"
+    - "チン(ポコ|ポ|コ|チン)"
+    - "まんこ"
+    - "マンコ"
+
+Languages:
+  Info:
+    Reload: "&7設定を再読込しました。"
+    AddNgWord: "&7NgWordに正規表現を追加しました。"
+    RemoveNgWord: "&7NgWordから正規表現を削除しました。"
+    ListNgWordHeader: "&6NgWords:"
+    ListNgWord: "&b  %word%"
+  ChatLimitMessage:
+    SamePlayerChatDenied: "&7* §b%times% &7回以上連続で発言できません。あと &b%cooldown% §7秒待つか、他の人が喋るのを待ちましょう。"
+    SimilarChatDenied: "&7* §b%times% &7回以上似たような発言はできません。"
+    NgWordDenied: "&7* NGワードが入った発言はできません。"
+  Error:
+    NotEnoughArguments: "&c引数が足りません。"
+    ArgumentDoesNotExist: "&c引数が存在しません。"
+  
